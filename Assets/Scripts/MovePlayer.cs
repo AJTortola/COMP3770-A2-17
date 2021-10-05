@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MovePlayer : MonoBehaviour
 {
-
     [SerializeField] 
     float speed = 10f;
     [SerializeField]
@@ -12,25 +11,10 @@ public class MovePlayer : MonoBehaviour
     [SerializeField]
     float gravity = 9.81f;
     private Vector3 moveDirection = Vector3.zero;
-    private float turner;
-    private float looker;
     public float sensitivity = 5f;
     [SerializeField]
     int numOfAlowedDJumps = 1; 
     int DoubleJumpCounter = 0;
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    private bool DoubleJump = false;
-=======
->>>>>>> main
-    // Use this for initialization
->>>>>>> main
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
@@ -46,21 +30,7 @@ public class MovePlayer : MonoBehaviour
             //Multiply it by speed.
             moveDirection *= speed;
             //Jumping
-<<<<<<< HEAD
-=======
-            if (Input.GetButton("Jump"))
-                moveDirection.y = jumpSpeed;
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
 
-           
-
-
-=======
->>>>>>> Stashed changes
->>>>>>> main
-            
             if (Input.GetButtonDown("Jump"))
             {
                 moveDirection.y = jumpSpeed;
@@ -75,17 +45,9 @@ public class MovePlayer : MonoBehaviour
             if (Input.GetButtonDown("Jump") && DoubleJumpCounter < numOfAlowedDJumps)
             {
                 moveDirection.y = jumpSpeed;
-<<<<<<< HEAD
                 DoubleJumpCounter++;
             }
-            
-=======
-           
-<<<<<<< Updated upstream
-=======
->>>>>>> main
->>>>>>> Stashed changes
->>>>>>> main
+
         }
 
         //Applying gravity to the controller

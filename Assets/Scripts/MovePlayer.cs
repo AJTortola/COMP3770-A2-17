@@ -33,7 +33,10 @@ public class MovePlayer : MonoBehaviour
             //Jumping
             if (Input.GetButton("Jump"))
                 moveDirection.y = jumpSpeed;
-
+            
+            else if (Input.GetButton("Jump"))
+                moveDirection.y = jumpSpeed;
+           
         }
 
         //Applying gravity to the controller

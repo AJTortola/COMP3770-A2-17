@@ -12,6 +12,10 @@ public class MovePlayer : MonoBehaviour
     private float looker;
     public float sensitivity = 5;
 
+<<<<<<< HEAD
+    private bool DoubleJump = false;
+=======
+>>>>>>> main
     // Use this for initialization
     void Start()
     {
@@ -33,10 +37,23 @@ public class MovePlayer : MonoBehaviour
             //Jumping
             if (Input.GetButton("Jump"))
                 moveDirection.y = jumpSpeed;
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+
+           
+
+
+=======
+>>>>>>> Stashed changes
             
             else if (Input.GetButton("Jump"))
                 moveDirection.y = jumpSpeed;
            
+<<<<<<< Updated upstream
+=======
+>>>>>>> main
+>>>>>>> Stashed changes
         }
 
         //Applying gravity to the controller

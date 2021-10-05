@@ -235,8 +235,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  jumpSpeed: 8
-  gravity: 20
+  jumpSpeed: 3.5
+  gravity: 9.81
   sensitivity: 5
 --- !u!143 &290876727
 CharacterController:

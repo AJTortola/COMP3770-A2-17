@@ -13,8 +13,8 @@ public class MovePlayer : MonoBehaviour
     private Vector3 moveDirection = Vector3.zero;
     public float sensitivity = 5f;
     [SerializeField]
-    int numOfAlowedDJumps = 1; 
-    int DoubleJumpCounter = 0;
+    int numOfAllowedDBLJumps = 1; 
+    int DBLJumpCounter = 0;
 
     // Update is called once per frame
     void Update()
@@ -34,7 +34,7 @@ public class MovePlayer : MonoBehaviour
             if (Input.GetButtonDown("Jump"))
             {
                 moveDirection.y = jumpSpeed;
-                DoubleJumpCounter = 0;
+                DBLJumpCounter = 0;
             }
         }
         else
@@ -42,10 +42,10 @@ public class MovePlayer : MonoBehaviour
             moveDirection.x = Input.GetAxis("Horizontal") * speed;
             moveDirection.z = Input.GetAxis("Vertical") * speed;
 
-            if (Input.GetButtonDown("Jump") && DoubleJumpCounter < numOfAlowedDJumps)
+            if (Input.GetButtonDown("Jump") && DBLJumpCounter < numOfAllowedDBLJumps)
             {
                 moveDirection.y = jumpSpeed;
-                DoubleJumpCounter++;
+                DBLJumpCounter++;
             }
 
         }

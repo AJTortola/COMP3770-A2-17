@@ -20,7 +20,7 @@ public class PickUpCounter : MonoBehaviour
 
     private void OnGUI()
     {
-        GUI.color = Color.black;
+        GUI.color = Color.white;
         GUI.Label(new Rect(10, 10, 100, 20), "Coins : " + points);
         
     }

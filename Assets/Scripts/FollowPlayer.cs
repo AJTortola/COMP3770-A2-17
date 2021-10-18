@@ -5,7 +5,7 @@ using UnityEngine;
 public class FollowPlayer : MonoBehaviour
 {
     public Transform targetObject;
-    public Vector3 cameraOffset;
+    public Vector3 cameraOffset = new Vector3(0f,10f,-10f);
     public float smooth = 0.5f;
     public bool lookAtTarget = false;
     void Start()

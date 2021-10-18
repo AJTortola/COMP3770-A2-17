@@ -6,14 +6,14 @@ public class RespawnPoint : MonoBehaviour
 {
     public Transform Player;
     public Transform Respawn;
-    public Transform Object;
-    public Transform RespawnObject;
+    public Transform Trap;
+    public Transform RespawnTrap;
 
     void OnTriggerEnter(Collider other)
     {
        if(other.CompareTag("Player")){
-            Player.transform.position = Respawn.transform.position;
-            Object.transform.position = RespawnObject.transform.position;
+            Player.transform.position = Respawn.transform.position; // set Player position to the Respawn Object Poisiton
+            Trap.transform.position = RespawnTrap.transform.position; // In Scene set Death Ball position to the DeathBallRespawn Poisiton
             Physics.SyncTransforms();
        }
     }

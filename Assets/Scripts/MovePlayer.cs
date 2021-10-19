@@ -37,12 +37,13 @@ public class MovePlayer : MonoBehaviour
                 DBLJumpCounter = 0;
             }
         }
-        else
+        else // when it's in the air
         {
+            // let's us move player midair like in mario
             moveDirection.x = Input.GetAxis("Horizontal") * speed;
             moveDirection.z = Input.GetAxis("Vertical") * speed;
 
-            if (Input.GetButtonDown("Jump") && DBLJumpCounter < numOfAllowedDBLJumps)
+            if (Input.GetButtonDown("Jump") && DBLJumpCounter < numOfAllowedDBLJumps) // enables only one Double Jump
             {
                 moveDirection.y = jumpSpeed;
                 DBLJumpCounter++;
